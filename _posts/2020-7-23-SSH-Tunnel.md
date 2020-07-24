@@ -30,6 +30,7 @@ Now, all the traffic from client localhost port 4000 is forwarded to 127.0.0.1 p
 ```
 ssh -L [local bind address]:[local bind port]:[remote bind address]:[remote bind port] [remote address]
 ```
+![local port forwarding](/images/ssh-tunneling/ssh-tunnel-local.jpeg)
 
 Remote port forwarding
 In this case, a specified port on the ssh server-side(remote) is bound to ssh client-side(local). On the server-side(remote), the ssh server is listening to the configured port, and forward any traffic from this port to ssh client configured port.
@@ -43,3 +44,5 @@ In the above example, an ssh connection is made to remote.server.com, and port 8
 ```
 ssh -R :[remote bind address]:[remote bind port]:[local bind address]:[local bind port] [remote address]
 ```
+
+![remote port forwarding](/images/ssh-tunneling/ssh-tunnel-remote.jpeg)
