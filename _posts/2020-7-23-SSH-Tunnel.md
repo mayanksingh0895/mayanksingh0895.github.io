@@ -46,3 +46,17 @@ ssh -R :[remote bind address]:[remote bind port]:[local bind address]:[local bin
 ```
 
 ![remote port forwarding](/images/ssh-tunneling/ssh-tunnel-remote.jpeg)
+
+### Additional parameters
+
+* To avoid to remote access into server machine provided `-N` parameter in the above command. This is useful for executing port fowarding operations only. 
+Example:
+    ```
+    ssh -N -L [local bind address]:[local bind port]:[remote bind address]:[remote bind port] [remote address]
+    ```
+
+* To get additional information for the operation happening behind the scenes(for debugging purposes), you can specify `-v` for verbosity. One can specify the it to maximum three times to get all debug messages, like `-vvv` . 
+  Example:
+  ```
+  ssh -L [local bind address]:[local bind port]:[remote bind address]:[remote bind port] [remote address] -vvv
+  ```
