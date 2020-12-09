@@ -15,5 +15,3 @@ Apart from this, I am an avid photographer and a trek fanatic.
 ### Contact me
 
 [mayanksingh0895@gmail.com](mailto:mayanksingh0895@gmail.com)
-
-{% include nav-social.html %}
